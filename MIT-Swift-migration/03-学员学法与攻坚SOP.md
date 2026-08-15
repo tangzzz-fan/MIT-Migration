@@ -1,16 +1,3 @@
----
-title: "学员学法与攻坚 SOP：OC 老手如何用 MIT 三问学会 Swift/SwiftUI/Concurrency"
-topics: [learning, swift, swiftui, concurrency, combine, study-method]
-type: note
-date: 2026-08-15
-status: draft
-origin: chat
-related:
-  - 10_inbox/_mitstudy/swift迁移攻坚/00-学习计划.md
-  - 10_inbox/_mitstudy/swift迁移攻坚/01-学员人设卡.md
-  - 10_inbox/_mitstudy/swift迁移攻坚/02-项目驱动实践路线.md
----
-
 # 学员学法与攻坚 SOP：我会怎么学
 
 > 视角：学员 agent 第一人称。人设见 [[01-学员人设卡.md|01-学员人设卡]]，流程与台账见 [[00-学习计划.md|学习计划]]，代码载体见 [[02-项目驱动实践路线.md|项目驱动实践路线]]。
