@@ -8,7 +8,7 @@
 
 - 方法本源与执行纪律：见 [`MIT-Swift-migration/04-方法论基座-MIT三问与测试协议.md`](MIT-Swift-migration/04-方法论基座-MIT三问与测试协议.md)（自包含，无外部依赖）；
 - 已完成的完整案例：[`MIT-Swift-migration/`](MIT-Swift-migration/)——一位十年 OC/UIKit 老手迁移 Swift/SwiftUI/Concurrency/Combine 的五主题攻坚 + 一轮增量迁移实操（T1–T6 全部闭环）；
-- 进行中：[`MIT-Python-Migration/`](MIT-Python-Migration/)——同一位学员的复习线（双分支：教练分支 `feat/mit-python-study` + 学员分支 `feat/mit-python-study-student`）：T1 Python 基础 → T2 线代 → T3 概率论 → T4 PyTorch 基础 → T5 基础算法，骨架文档已立，拷问未开跑。
+- 进行中：[`MIT-Python-Migration/`](MIT-Python-Migration/)——同一位学员的复习线（双分支：教练分支 `feat/mit-python-study` + 学员分支 `feat/mit-python-study-student`）：T1 Python 基础 → T2 线代 → T3 概率论 → T4 PyTorch 基础 → T5 基础算法 → T6 async 与企业落地（显式增量轮），骨架文档已立，T1 拷问进行中；环境用 uv 管理的项目 venv（CPython 3.12）。
 
 ## MIT 方法速览
 
@@ -75,4 +75,4 @@ swift Q1-值语义泄漏现形.swift     # 每个文件都是独立顶层脚本
 
 - **Swift 迁移线**：T1–T5 五主题拷问全部闭环收官，候选增量轮 T6（Combine → async 迁移实操）也已闭环（双通道复攻后全过，代码 Swift 6.3.3 本机实跑，撞墙 19 处全留档）；覆盖度评估与候选增量见 `00-学习计划` 第六节；
 - **下一步**：转入项目真机线，执行序列与回收台账见 `MIT-Swift-migration/05-项目真机线迭代计划.md`（从 Phase 2.1 起手，工程骨架已占位未开跑）；
-- **Python 复习线**：双分支已立——教练分支 `feat/mit-python-study`（计划+密卷+批改）与学员分支 `feat/mit-python-study-student`（题干+学员产出），五主题骨架文档（00–04）与 `代码/T1～T5` 已就绪，拷问从 T1 待开跑；双分支协议（防假学习）见 `MIT-Python-Migration/00-学习计划` 第三节，方法基座自包含于 `MIT-Python-Migration/04-方法论基座` 并新增「复习线补充条款」（会算但无直觉 = 半过）。
+- **Python 复习线**：双分支已立——教练分支 `feat/mit-python-study`（计划+密卷+批改）与学员分支 `feat/mit-python-study-student`（题干+学员产出），六主题（含学员要求增设的 T6 async 与企业落地）骨架文档（00–04）与 `代码/T1～T6` 已就绪，T1 拷问进行中；双分支协议（防假学习）见 `MIT-Python-Migration/00-学习计划` 第三节，方法基座自包含于 `MIT-Python-Migration/04-方法论基座` 并新增「复习线补充条款」（会算但无直觉 = 半过）。
