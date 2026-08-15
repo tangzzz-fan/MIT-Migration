@@ -53,6 +53,12 @@
 - **预判卡点**：Python 解释执行的耗时常数直觉；heapq 只有小顶堆的绕行写法。
 - **破法**：5.4 的 Swift vs Python 实测耗时报告是锚——没有数据的复杂度感觉不进费曼稿。
 
+### T6 async 与企业落地：拿 GCD/async 存量当跳板，警惕「事件循环 ≠ 派发队列」
+
+- **我会怎么学**：Swift Concurrency 收官经验是入口——Task/取消/结构化并发都有对应物，先做 asyncio vs Swift Concurrency 对照表（项目 6.1），再撞对照不上的墙：协程对象调了不执行、阻塞杀 loop、task 不 await 静默消失。工程化部分拿 6.2 的并发 LLM API 网关当载体，pytest/logging/依赖管理顺着真实需求长出来，不孤立学工具。
+- **预判卡点**：`asyncio.run` 与事件循环生命周期；TaskGroup 取消语义与 Swift 的差异；Semaphore 限流的实现细节。
+- **破法**：故意在协程里写 `time.sleep` 看并发度崩塌（撞一次就记住），再换 `await asyncio.sleep` 对照；限流效果用带时间戳的日志证明，不凭感觉。
+
 ## 四、反模式自查清单（每次学习后过一遍）
 
 - [ ] 我有没有嘴上要提示、心里等答案？（C2 红线）
