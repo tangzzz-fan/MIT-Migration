@@ -1,6 +1,6 @@
 # MIT-Python-Migration：学员工作区
 
-> 这是 Python 复习线的**学员分支**（`feat/mit-python-study-student`，对应 worktree `../MIT-Migration-python-student`）。本目录只有题干与学习骨架，**不含密卷、旧作答、批改、费曼与解法代码**——这是防假学习机制，不是遗漏。
+> 这是 Python 复习线的**学员分支**（`feat/mit-python-study-student`，对应 worktree `.worktrees/python-student`）。本目录只有题干与学习骨架，**不含密卷、旧作答、批改、费曼与解法代码**——这是防假学习机制，不是遗漏。
 
 ## 你在这里做什么
 
@@ -14,7 +14,7 @@
 
 ## 教练内容在哪
 
-教练分支 `feat/mit-python-study`（对应 worktree `../MIT-Migration-python-coach`）含：
+教练分支 `feat/mit-python-study`（对应 worktree `.worktrees/python-coach`）含：
 
 - 全量归档（旧作答 / 批改 / 费曼 / 解法代码）；
 - 6 份 `T{n}-01-教练密卷-<主题>.md`（评分要点 + 三级提示 + 参考答案）；
