@@ -7,8 +7,8 @@
 本仓库存放「MIT 迁移学习」的完整过程档案：每当要快速掌握一门陌生语言、框架或知识域，就在这里开一个迁移目录，用双 agent 仿真（教练 + 学员）跑一轮轮「三问拷问」，直到知识主轴全部闭环。
 
 - 方法本源与执行纪律：见 [`MIT-Swift-migration/04-方法论基座-MIT三问与测试协议.md`](MIT-Swift-migration/04-方法论基座-MIT三问与测试协议.md)（自包含，无外部依赖）；
-- 已完成的完整案例：[`MIT-Swift-migration/`](MIT-Swift-migration/)——一位十年 OC/UIKit 老手迁移 Swift/SwiftUI/Concurrency/Combine 的五主题攻坚 + 一轮增量迁移实操（T1–T6 全部闭环）；
-- 进行中：[`MIT-Python-Migration/`](MIT-Python-Migration/)——同一位学员的复习线（双分支：教练分支 `feat/mit-python-study` + 学员分支 `feat/mit-python-study-student`）：T1 Python 基础 → T2 线代 → T3 概率论 → T4 PyTorch 基础 → T5 基础算法 → T6 async 与企业落地（显式增量轮），骨架文档已立，T1 拷问进行中；环境用 uv 管理的项目 venv（CPython 3.12）。
+- 完整案例一：[`MIT-Swift-migration/`](MIT-Swift-migration/)——一位十年 OC/UIKit 老手迁移 Swift/SwiftUI/Concurrency/Combine 的五主题攻坚 + 一轮增量迁移实操（T1–T6 全部闭环）；
+- 完整案例二：[`MIT-Python-Migration/`](MIT-Python-Migration/)——同一位学员的 Python 复习线（T1 Python 基础 → T2 线代 → T3 概率论 → T4 PyTorch 基础 → T5 算法收束 → T6 async 与企业落地，六轮全部闭环，代码全实跑）；首次启用**双分支防假学习协议**：教练分支 `feat/mit-python-study`（骨架+题干+密卷+批改+台账）与学员分支 `feat/mit-python-study-student`（题干+作答+代码+费曼），角色用法见 [`MIT-Python-Migration/使用说明书-角色指南.md`](MIT-Python-Migration/使用说明书-角色指南.md)；环境用 uv 管理的项目 venv（CPython 3.12）。
 
 ## MIT 方法速览
 
@@ -39,7 +39,12 @@ MIT-Migration/
 │   ├── 05-项目真机线迭代计划.md      ← 拷问收官后的真机执行序列与回收台账
 │   ├── 代码/T1/～代码/T6/           ← 每道代码题的可跑 .swift，文件头含撞墙记录
 │   └── 项目真机线/Phase1～Phase5/   ← 真机迭代工程骨架占位（.gitkeep，未开跑）
-└── MIT-Python-Migration/            ← 复习线：Python 基础/线代/概率论/PyTorch/算法（骨架已立，未开跑）
+└── MIT-Python-Migration/            ← 复习线：六主题全部闭环（四件套×6 + 代码/T1~T6 实跑）
+    ├── 00~04 骨架文档（同左，另增「复习线补充条款」：会算无直觉=半过）
+    ├── T1~T6 四件套×6                    ← 含 6 份教练密卷（仅教练分支历史产出）
+    ├── 代码/T1/～代码/T6/               ← 可跑 .py，文件头含撞墙记录（T5 含 Swift 对照）
+    ├── 使用说明书-角色指南.md            ← 学员/教练两角色如何使用本目录
+    └── 学员须知.md                        ← 闭卷作答规则与防假学习红线
 ```
 
 ## 你可以怎么用这个仓库
@@ -61,7 +66,16 @@ swift Q1-值语义泄漏现形.swift     # 每个文件都是独立顶层脚本
 4. 台账纪律照抄 C1–C5：未过不写过关，半过拆判分点；
 5. 前序主题的遗留观察项，在后续主题里点名回收（见 Swift 案例 T5-03 第四节的回收清单格式）。
 
-### 3. 让 AI agent 替你跑
+### 3. 用双分支协议跑新线（防假学习升级版）
+
+Python 线验证过的双分支模式：教练分支持密卷（判分点+提示梯+参考答案），学员分支只见题干；唯一合法 merge 方向是学员→教练（交卷阅卷），教练→学员仅允许选择性单文件同步题干。步骤：
+
+1. 从教练分支开新线，出题后把题干单文件同步到学员分支（`git checkout 教练分支 -- 题干文件`）；
+2. 同步后自查：`git ls-tree -r --name-only 学员分支 | grep 密卷` 必须为空（注意：中文文件名需加 `-c core.quotepath=false`）；
+3. 学员分支闭卷作答+代码实跑，提交后由教练分支 merge 收卷、对照密卷判分；
+4. 角色分工与红线见 `MIT-Python-Migration/使用说明书-角色指南.md`。
+
+### 4. 让 AI agent 替你跑
 
 本仓库的每份文档都是 agent 可执行的规范：人设卡约束「不许全知全能」，出题集含评分要点与三级提示，批改文件含失真自查。把目录喂给 agent，指定它扮演教练或学员即可续跑。
 
@@ -71,8 +85,8 @@ swift Q1-值语义泄漏现形.swift     # 每个文件都是独立顶层脚本
 - 代码全靠教练代写也能判过 → 双通道失守；
 - 台账把半懂写成过关 → 如实性失守。
 
-## 当前状态（2026-08-15）
+## 当前状态（2026-08-16）
 
-- **Swift 迁移线**：T1–T5 五主题拷问全部闭环收官，候选增量轮 T6（Combine → async 迁移实操）也已闭环（双通道复攻后全过，代码 Swift 6.3.3 本机实跑，撞墙 19 处全留档）；覆盖度评估与候选增量见 `00-学习计划` 第六节；
-- **下一步**：转入项目真机线，执行序列与回收台账见 `MIT-Swift-migration/05-项目真机线迭代计划.md`（从 Phase 2.1 起手，工程骨架已占位未开跑）；
-- **Python 复习线**：双分支已立——教练分支 `feat/mit-python-study`（计划+密卷+批改）与学员分支 `feat/mit-python-study-student`（题干+学员产出），六主题（含学员要求增设的 T6 async 与企业落地）骨架文档（00–04）与 `代码/T1～T6` 已就绪，T1 拷问进行中；双分支协议（防假学习）见 `MIT-Python-Migration/00-学习计划` 第三节，方法基座自包含于 `MIT-Python-Migration/04-方法论基座` 并新增「复习线补充条款」（会算但无直觉 = 半过）。
+- **Swift 迁移线**：T1–T6 全部闭环（含 T6 Combine→async 增量轮，代码 Swift 6.3.3 本机实跑，撞墙 19 处全留档）；真机线执行序列与回收台账见 `MIT-Swift-migration/05-项目真机线迭代计划.md`（工程骨架已占位未开跑）；
+- **Python 复习线**：T1–T6 全部闭环（六轮四件套齐，代码全实跑；T6 判定：概念首轮 6过2半、代码 4过0半，复攻全销账）；双分支防假学习协议全程执行，遗留观察项全部清偿或转结，仅两条「已知未练」（熔断实操、asyncio.shield）如实留档；台账与覆盖度见 `MIT-Python-Migration/00-学习计划`；
+- **分支布局**：`main`（本分支，含两线全部归档）｜`feat/mit-python-study`（教练线，含 6 份密卷）｜`feat/mit-python-study-student`（学员线，零密卷）；均已推送远端。
