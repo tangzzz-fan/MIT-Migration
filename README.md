@@ -92,18 +92,18 @@ MIT-Migration/                            ← 主仓库（main 归档 + 分支�
 ├── _template/新方向启动清单.md            ← 开新线的执行清单（SOP 配套）
 ├── MIT-Swift-migration/                  ← 案例一（T1–T6 闭环）
 │   ├── 00–05 骨架文档 + 使用说明书-角色指南.md
-│   ├── T{n}-01 教练出题（题干版，学员分支/教练分支一致）
-│   ├── T{n}-01 教练密卷（仅教练分支 feat/mit-swift-study）
-│   ├── T{n}-02 作答 / T{n}-03 批改 / T{n}-04 费曼（仅教练分支归档）
-│   ├── 代码/T1~T6（旧解法在教练分支；学员分支为空 .gitkeep）
+│   ├── T{n}-01 教练出题（题干版，main/教练/学员分支一致）
+│   ├── T{n}-01 教练密卷（main 归档 + 教练分支持有）
+│   ├── T{n}-02 作答 / T{n}-03 批改 / T{n}-04 费曼（归档）
+│   ├── 代码/T1~T6（旧解法归档；学员分支为空 .gitkeep）
 │   └── 项目真机线/（骨架占位）
 ├── MIT-Python-Migration/                 ← 案例二（T1–T6 闭环，结构同上）
 └── worktrees（不在本目录内，见下表）
 
 分支布局：
-  main                                归档：两线全量（Swift 线为拆分前原始版）
-  feat/mit-swift-study                Swift 教练：密卷 + 旧产出（本机，未推送）
-  feat/mit-swift-study-student        Swift 学员：题干 + 空代码目录（本机，未推送）
+  main                                归档：两线全量（教练侧：题干 + 密卷 + 旧产出 + 使用指南）
+  feat/mit-swift-study                Swift 教练：密卷 + 旧产出（已推送）
+  feat/mit-swift-study-student        Swift 学员：题干 + 空代码目录（已推送）
   feat/mit-python-study               Python 教练：密卷 + 旧产出（已推送）
   feat/mit-python-study-student       Python 学员：题干 + 空代码目录（已推送）
 
