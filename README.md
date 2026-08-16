@@ -85,7 +85,7 @@ Swift 迁移线原先把「弱/中/强提示 + 评分要点」直接内嵌在 `T
 
 - `feat/mit-swift-study`（教练分支）：全量归档 + 新增 6 份 `T{n}-01-教练密卷`（提示梯 + 评分要点 + 旧作答/批改/费曼/解法定位）；
 - `feat/mit-swift-study-student`（学员分支）：只有骨架文档 + 题干版 `T{n}-01` + 空 `代码/T{n}/`，**物理上不含密卷、旧作答、批改、费曼与解法代码**；
-- 用法：`git worktree add ../MIT-Migration-coach feat/mit-swift-study` 与 `git worktree add ../MIT-Migration-student feat/mit-swift-study-student` 各挂一个目录，学员目录闭卷实操、教练目录对密卷自批，无需切分支；
+- 用法：`git worktree add .worktrees/swift-coach feat/mit-swift-study` 与 `git worktree add .worktrees/swift-student feat/mit-swift-study-student` 各挂一个目录，学员目录闭卷实操、教练目录对密卷自批，无需切分支；
 - 角色分工、自批循环与红线见 `MIT-Swift-migration/使用说明书-角色指南.md` 与 `MIT-Swift-migration/学员须知.md`（仅学员分支）。
 
 ## 纪律红线（失真即重跑）
