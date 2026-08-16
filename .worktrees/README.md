@@ -10,6 +10,8 @@
 | `python-student` | `feat/mit-python-study-student` | Python 学员（闭卷） |
 | `dp-coach` | `feat/mit-dp-study` | 设计模式教练（全量） |
 | `dp-student` | `feat/mit-dp-study-student` | 设计模式学员（三处齐全，先闭卷后对照） |
+| `coreml-coach` | `feat/mit-coreml-study` | CoreML 教练（全量） |
+| `coreml-student` | `feat/mit-coreml-study-student` | CoreML 学员（三处齐全，先闭卷后对照） |
 
 - 仓库根目录（main）= 全量归档 + README + 内容地图（[`00-内容地图.md`](../00-内容地图.md)）；
 - 日常练习进对应 `*-student` 目录；判卷 / 看答案进 `*-coach` 目录；
