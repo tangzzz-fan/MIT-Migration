@@ -11,3 +11,7 @@
 __pycache__/
 .pytest_cache/
 *.pyc
+
+# git worktrees（仓库内多视图工作目录）
+.worktrees/*
+!.worktrees/README.md
