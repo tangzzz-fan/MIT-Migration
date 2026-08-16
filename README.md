@@ -16,7 +16,8 @@
 
 - 方法本源与执行纪律：见 [`MIT-Swift-migration/04-方法论基座-MIT三问与测试协议.md`](MIT-Swift-migration/04-方法论基座-MIT三问与测试协议.md)（自包含，无外部依赖）；
 - 完整案例一：[`MIT-Swift-migration/`](MIT-Swift-migration/)——十年 OC/UIKit 老手迁移 Swift/SwiftUI/Concurrency/Combine（T1–T6 全部闭环，代码 Swift 6.3.3 实跑）；
-- 完整案例二：[`MIT-Python-Migration/`](MIT-Python-Migration/)——同一位学员的 Python 复习线（T1 基础 → T2 线代 → T3 概率论 → T4 PyTorch → T5 算法收束 → T6 async 落地，六轮闭环，代码全实跑）。
+- 完整案例二：[`MIT-Python-Migration/`](MIT-Python-Migration/)——同一位学员的 Python 复习线（T1 基础 → T2 线代 → T3 概率论 → T4 PyTorch → T5 算法收束 → T6 async 落地，六轮闭环，代码全实跑）；
+- 进行中案例三：[`MIT-DesignPattern-Migration/`](MIT-DesignPattern-Migration/)——设计模式系统化（六主题：基座 → 创建型 → 结构型 → 行为型 → 架构与并发 → 收束重构，T1 已出题，双 worktree 已挂载）。
 
 ## MIT 方法速览
 
@@ -98,6 +99,7 @@ MIT-Migration/                            ← 主仓库（main 归档 + 分支�
 │   ├── 代码/T1~T6（旧解法归档；学员分支为空 .gitkeep）
 │   └── 项目真机线/（骨架占位）
 ├── MIT-Python-Migration/                 ← 案例二（T1–T6 闭环，结构同上）
+├── MIT-DesignPattern-Migration/          ← 案例三（进行中：T1 已出题，结构同上）
 └── worktrees（不在本目录内，见下表）
 
 分支布局：
@@ -106,12 +108,16 @@ MIT-Migration/                            ← 主仓库（main 归档 + 分支�
   feat/mit-swift-study-student        Swift 学员：题干 + 空代码目录（已推送）
   feat/mit-python-study               Python 教练：密卷 + 旧产出（已推送）
   feat/mit-python-study-student       Python 学员：题干 + 空代码目录（已推送）
+  feat/mit-dp-study                   设计模式教练：密卷 + 旧产出（新线）
+  feat/mit-dp-study-student           设计模式学员：题干 + 空代码目录（新线）
 
 已挂 worktree：
   ../MIT-Migration-coach            → feat/mit-swift-study
   ../MIT-Migration-student          → feat/mit-swift-study-student
   ../MIT-Migration-python-coach     → feat/mit-python-study
   ../MIT-Migration-python-student   → feat/mit-python-study-student
+  ../MIT-Migration-dp-coach         → feat/mit-dp-study
+  ../MIT-Migration-dp-student       → feat/mit-dp-study-student
 ```
 
 ## 纪律红线（失真即重跑）
@@ -125,4 +131,5 @@ MIT-Migration/                            ← 主仓库（main 归档 + 分支�
 
 - **Swift 迁移线**：T1–T6 全部闭环；密卷已与题干分家（6 份），教练/学员双分支 + 双 worktree 就绪；真机线执行序列与回收台账见 `MIT-Swift-migration/05-项目真机线迭代计划.md`；
 - **Python 复习线**：T1–T6 全部闭环；双分支 + 双 worktree 就绪，学员分支零密卷；
-- **首要目标**：两线内容都是「练方法」的器械——先读方法，再重跑一条线，最后开一条自己的新方向，MIT 方法才算真正学会。
+- **设计模式线（新）**：六主题计划、人设卡、项目路线、SOP 与角色文档齐备；T1 模式基座已出题（题干 + 密卷），教练/学员双 worktree 已挂载，待开跑；
+- **首要目标**：三线内容都是「练方法」的器械——先读方法，再重跑一条线，最后开一条自己的新方向，MIT 方法才算真正学会。
