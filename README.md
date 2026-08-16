@@ -79,14 +79,23 @@ Python 线验证过的双分支模式：教练分支持密卷（判分点+提示
 
 本仓库的每份文档都是 agent 可执行的规范：人设卡约束「不许全知全能」，出题集含评分要点与三级提示，批改文件含失真自查。把目录喂给 agent，指定它扮演教练或学员即可续跑。
 
+### 5. Swift 线双分支 + worktree 重跑模式（问题答案已物理分家）
+
+Swift 迁移线原先把「弱/中/强提示 + 评分要点」直接内嵌在 `T{n}-01-教练出题` 里，学员拿题即得答案册。2026-08-17 起拆成两条分支 + 两个 worktree：
+
+- `feat/mit-swift-study`（教练分支）：全量归档 + 新增 6 份 `T{n}-01-教练密卷`（提示梯 + 评分要点 + 旧作答/批改/费曼/解法定位）；
+- `feat/mit-swift-study-student`（学员分支）：只有骨架文档 + 题干版 `T{n}-01` + 空 `代码/T{n}/`，**物理上不含密卷、旧作答、批改、费曼与解法代码**；
+- 用法：`git worktree add ../MIT-Migration-coach feat/mit-swift-study` 与 `git worktree add ../MIT-Migration-student feat/mit-swift-study-student` 各挂一个目录，学员目录闭卷实操、教练目录对密卷自批，无需切分支；
+- 角色分工、自批循环与红线见 `MIT-Swift-migration/使用说明书-角色指南.md` 与 `MIT-Swift-migration/学员须知.md`（仅学员分支）。
+
 ## 纪律红线（失真即重跑）
 
 - 学员全题全对 → 人设失效；
 - 代码全靠教练代写也能判过 → 双通道失守；
 - 台账把半懂写成过关 → 如实性失守。
 
-## 当前状态（2026-08-16）
+## 当前状态（2026-08-17）
 
-- **Swift 迁移线**：T1–T6 全部闭环（含 T6 Combine→async 增量轮，代码 Swift 6.3.3 本机实跑，撞墙 19 处全留档）；真机线执行序列与回收台账见 `MIT-Swift-migration/05-项目真机线迭代计划.md`（工程骨架已占位未开跑）；
+- **Swift 迁移线**：T1–T6 全部闭环（含 T6 Combine→async 增量轮，代码 Swift 6.3.3 本机实跑，撞墙 19 处全留档）；真机线执行序列与回收台账见 `MIT-Swift-migration/05-项目真机线迭代计划.md`（工程骨架已占位未开跑）；**已拆出教练/学员双分支 + 双 worktree 重跑模式**（密卷 6 份与题干分家）；
 - **Python 复习线**：T1–T6 全部闭环（六轮四件套齐，代码全实跑；T6 判定：概念首轮 6过2半、代码 4过0半，复攻全销账）；双分支防假学习协议全程执行，遗留观察项全部清偿或转结，仅两条「已知未练」（熔断实操、asyncio.shield）如实留档；台账与覆盖度见 `MIT-Python-Migration/00-学习计划`；
-- **分支布局**：`main`（本分支，含两线全部归档）｜`feat/mit-python-study`（教练线，含 6 份密卷）｜`feat/mit-python-study-student`（学员线，零密卷）；均已推送远端。
+- **分支布局**：`main`（本分支，含两线全部归档）｜`feat/mit-python-study`（Python 教练线，含 6 份密卷）｜`feat/mit-python-study-student`（Python 学员线，零密卷）｜`feat/mit-swift-study`（Swift 教练线，含 6 份密卷）｜`feat/mit-swift-study-student`（Swift 学员线，零密卷）；Python 两分支已推送远端，Swift 两分支为本机新开。
