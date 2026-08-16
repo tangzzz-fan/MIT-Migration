@@ -18,7 +18,7 @@
 
 - 方法本源与执行纪律：见 [`MIT-Swift-migration/04-方法论基座-MIT三问与测试协议.md`](MIT-Swift-migration/04-方法论基座-MIT三问与测试协议.md)（自包含，无外部依赖）；
 - 完整案例一：[`MIT-Swift-migration/`](MIT-Swift-migration/)——十年 OC/UIKit 老手迁移 Swift/SwiftUI/Concurrency/Combine（T1–T6 全部闭环，代码 Swift 6.3.3 实跑）；
-- 完整案例二：[`MIT-Python-Migration/`](MIT-Python-Migration/)——同一位学员的 Python 复习线（T1 基础 → T2 线代 → T3 概率论 → T4 PyTorch → T5 算法收束 → T6 async 落地，六轮闭环，代码全实跑；2026-08-17 补 T7–T9 三独立轮：LLM API 客户端与提示工程 / Embedding 与向量检索 / Tokenizer 与 Transformer）；
+- 完整案例二：[`MIT-Python-Migration/`](MIT-Python-Migration/)——同一位学员的 Python 复习线（T1 基础 → T2 线代 → T3 概率论 → T4 PyTorch → T5 算法收束 → T6 async 落地，六轮闭环，代码全实跑；2026-08-17 补 T7–T9 三独立轮：LLM API 客户端与提示工程 / Embedding 与向量检索 / Tokenizer 与 Transformer，出题+密卷+示例批改/费曼+参考代码齐备并实跑验证）；
 - 进行中案例三：[`MIT-DesignPattern-Migration/`](MIT-DesignPattern-Migration/)——设计模式系统化（六主题：基座 → 创建型 → 结构型 → 行为型 → 架构与并发 → 收束重构；T1–T6 出题 + 密卷 + 24 个 Swift 代码练习 + 示例批改/费曼齐备，**三处齐全**：main / 教练侧 / 学员侧均可见）。
 
 ## MIT 方法速览
@@ -132,6 +132,6 @@ MIT-Migration/                            ← 主仓库（main 归档 + 分支�
 ## 当前状态（2026-08-17）
 
 - **Swift 迁移线**：T1–T6 全部闭环；密卷已与题干分家（6 份），教练/学员双分支 + 双 worktree 就绪；真机线执行序列与回收台账见 `MIT-Swift-migration/05-项目真机线迭代计划.md`；
-- **Python 复习线**：T1–T6 全部闭环；新增 T7–T9 三独立轮（LLM 企业落地补齐：API 客户端与提示工程 / Embedding 与向量检索 / 模型面）已出题待开跑；双分支 + 双 worktree 就绪，学员分支零密卷；
+- **Python 复习线**：T1–T6 全部闭环；T7–T9 三独立轮（LLM 企业落地补齐）出题 + 密卷 + 示例批改/费曼 + 12 个参考代码齐备（httpx/重试/熔断、余弦检索/切分/迷你 RAG/召回评估、BPE/自注意力/单层 Transformer，实跑验证）；双分支 + 双 worktree 就绪，学员分支零密卷；
 - **设计模式线（新）**：T1–T6 出题 + 密卷 + 24 个 Swift 代码练习（语法与实跑验证）+ 示例批改/费曼齐备，**三处齐全**（学员侧可见，自律模式先闭卷后对照）；待真实开跑；
 - **首要目标**：三线内容都是「练方法」的器械——先读方法，再重跑一条线，最后开一条自己的新方向，MIT 方法才算真正学会。
