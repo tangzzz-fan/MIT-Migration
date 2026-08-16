@@ -54,6 +54,7 @@ swift Q1-值语义泄漏现形.swift     # 每个文件都是独立顶层脚本
 |--------|-------------------|----------------------|
 | Swift | `.worktrees/swift-student` | `.worktrees/swift-coach` |
 | Python | `.worktrees/python-student` | `.worktrees/python-coach` |
+| 设计模式 | `.worktrees/dp-student` | `.worktrees/dp-coach` |
 | CoreML | `.worktrees/coreml-student` | `.worktrees/coreml-coach` |
 
 学员目录只有骨架 + 题干 + 空 `代码/T{n}/`，**没有密卷、旧作答、批改、费曼与解法代码**。标准循环：
