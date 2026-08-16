@@ -70,8 +70,8 @@ swift Q1-值语义泄漏现形.swift     # 每个文件都是独立顶层脚本
 Python 线沿用双分支协议（密卷早已与题干分家），2026-08-17 起把「切分支」升级为「双 worktree」：教练分支与学员分支各自挂一个独立目录，同时存在、无需切换。用法：
 
 ```bash
-git worktree add ../MIT-Migration-python-coach   feat/mit-python-study
-git worktree add ../MIT-Migration-python-student feat/mit-python-study-student
+git worktree add .worktrees/python-coach   feat/mit-python-study
+git worktree add .worktrees/python-student feat/mit-python-study-student
 ```
 
 学员目录只有骨架 + 题干 + 空 `代码/T{n}/`，物理上不含密卷、旧作答、批改、费曼与解法代码；角色分工、自批循环与红线见 `MIT-Python-Migration/使用说明书-角色指南.md` 与 `MIT-Python-Migration/学员须知.md`。
