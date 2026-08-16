@@ -48,8 +48,8 @@ swift Q1-值语义泄漏现形.swift     # 每个文件都是独立顶层脚本
 
 | 学习线 | 学员目录（闭卷练） | 教练目录（答案与判分） |
 |--------|-------------------|----------------------|
-| Swift | `../MIT-Migration-student` | `../MIT-Migration-coach` |
-| Python | `../MIT-Migration-python-student` | `../MIT-Migration-python-coach` |
+| Swift | `.worktrees/swift-student` | `.worktrees/swift-coach` |
+| Python | `.worktrees/python-student` | `.worktrees/python-coach` |
 
 学员目录只有骨架 + 题干 + 空 `代码/T{n}/`，**没有密卷、旧作答、批改、费曼与解法代码**。标准循环：
 
@@ -63,7 +63,7 @@ swift Q1-值语义泄漏现形.swift     # 每个文件都是独立顶层脚本
 
 ### 想直接看教练侧内容？
 
-- 本地已挂好的教练 worktree：`../MIT-Migration-coach`（Swift）与 `../MIT-Migration-python-coach`（Python），直接打开目录即可看到密卷（提示梯 + 评分要点 + 参考答案定位）、旧作答、批改、费曼、解法代码与台账；
+- 本地已挂好的教练 worktree：`.worktrees/swift-coach`（Swift）与 `.worktrees/python-coach`（Python），直接打开目录即可看到密卷（提示梯 + 评分要点 + 参考答案定位）、旧作答、批改、费曼、解法代码与台账；
 - 不想开目录也行，git 直接读：`git show feat/mit-swift-study:MIT-Swift-migration/T1-01-教练密卷-Swift语言核心.md`（Python 同理，分支名换成 `feat/mit-python-study`）；
 - 需要知道的事实：教练侧和学员侧的唯一区别是「工作区里有没有答案文件」。同一仓库的 git 历史里全部内容都在，`git show` 永远翻得到——worktree 隔离防的是「顺手可见」，不防刻意翻历史；真要做到物理隔离，需要给学员开一个**从未含过答案**的独立仓库。
 
@@ -80,7 +80,7 @@ swift Q1-值语义泄漏现形.swift     # 每个文件都是独立顶层脚本
 3. **建骨架**：复制任一现有线的 `00/01/02/03/04` 五份骨架文档到 `MIT-<主题>-Migration/`，替换人设卡、主题表与项目载体。
 4. **出题即拆卷**：每主题在教练分支产两份——`T{n}-01-教练出题-<主题>.md`（题干：共识五模型 + 争议三焦点 + 概念题 + 代码题 + 脚手架）与 `T{n}-01-教练密卷-<主题>.md`（弱/中/强提示 + 评分要点 + 参考答案）。**密卷从第一天起就不进学员分支。**
 5. **开学员分支并闭卷化**：`git checkout -b feat/mit-<short>-study-student feat/mit-<short>-study` → `git rm` 全部密卷文件 → 建空 `代码/T{n}/`（.gitkeep）→ 自查 `git -c core.quotepath=false ls-tree -r --name-only HEAD | grep 密卷` 必须为空 → 提交。
-6. **挂双 worktree**：`git worktree add ../MIT-Migration-<short>-coach feat/mit-<short>-study` 与 `git worktree add ../MIT-Migration-<short>-student feat/mit-<short>-study-student`。
+6. **挂双 worktree**：`git worktree add .worktrees/<short>-coach feat/mit-<short>-study` 与 `git worktree add .worktrees/<short>-student feat/mit-<short>-study-student`。
 7. **跑闭环**：学员闭卷作答 + 代码实跑 → 教练按密卷判分（过 / 半过拆判分点 / 未过）→ 复攻销账 → 费曼写回 → 台账如实（C1–C5）。一个主题闭环再开下一个；前序遗留观察项在后续主题点名回收。
 8. **收官归档（可选）**：整线闭环后 `git checkout main && git merge feat/mit-<short>-study`，main 保持只读归档。
 
@@ -108,10 +108,10 @@ MIT-Migration/                            ← 主仓库（main 归档 + 分支�
   feat/mit-python-study-student       Python 学员：题干 + 空代码目录（已推送）
 
 已挂 worktree：
-  ../MIT-Migration-coach            → feat/mit-swift-study
-  ../MIT-Migration-student          → feat/mit-swift-study-student
-  ../MIT-Migration-python-coach     → feat/mit-python-study
-  ../MIT-Migration-python-student   → feat/mit-python-study-student
+  .worktrees/swift-coach            → feat/mit-swift-study
+  .worktrees/swift-student          → feat/mit-swift-study-student
+  .worktrees/python-coach     → feat/mit-python-study
+  .worktrees/python-student   → feat/mit-python-study-student
 ```
 
 ## 纪律红线（失真即重跑）
