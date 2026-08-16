@@ -14,6 +14,8 @@
 | **练方法** | 用学员/教练双 worktree 重跑现有线 | 想亲手把 Swift/Python 再学一遍的人 |
 | **用方法** | 开一条 `MIT-<主题>-Migration` 新线 | 想用 MIT 方法攻坚自己陌生领域的人 |
 
+> 全量内容索引（按线 / 轮次 / 类型点击直达）：[`00-内容地图.md`](00-内容地图.md)。
+
 - 方法本源与执行纪律：见 [`MIT-Swift-migration/04-方法论基座-MIT三问与测试协议.md`](MIT-Swift-migration/04-方法论基座-MIT三问与测试协议.md)（自包含，无外部依赖）；
 - 完整案例一：[`MIT-Swift-migration/`](MIT-Swift-migration/)——十年 OC/UIKit 老手迁移 Swift/SwiftUI/Concurrency/Combine（T1–T6 全部闭环，代码 Swift 6.3.3 实跑）；
 - 完整案例二：[`MIT-Python-Migration/`](MIT-Python-Migration/)——同一位学员的 Python 复习线（T1 基础 → T2 线代 → T3 概率论 → T4 PyTorch → T5 算法收束 → T6 async 落地，六轮闭环，代码全实跑）；
