@@ -1,6 +1,6 @@
 # MIT-Swift-Migration：学员工作区
 
-> 这是 Swift 迁移线的**学员分支**（`feat/mit-swift-study-student`，对应 worktree `../MIT-Migration-student`）。本目录只有题干与学习骨架，**不含密卷、旧作答、批改、费曼与解法代码**——这是防假学习机制，不是遗漏。
+> 这是 Swift 迁移线的**学员分支**（`feat/mit-swift-study-student`，对应 worktree `.worktrees/swift-student`）。本目录只有题干与学习骨架，**不含密卷、旧作答、批改、费曼与解法代码**——这是防假学习机制，不是遗漏。
 
 ## 你在这里做什么
 
@@ -14,7 +14,7 @@
 
 ## 教练内容在哪
 
-教练分支 `feat/mit-swift-study`（对应 worktree `../MIT-Migration-coach`）含：
+教练分支 `feat/mit-swift-study`（对应 worktree `.worktrees/swift-coach`）含：
 
 - 全量归档（旧作答 / 批改 / 费曼 / 解法代码）；
 - 6 份 `T{n}-01-教练密卷-<主题>.md`（弱/中/强提示 + 评分要点 + 参考答案定位）；
