@@ -20,7 +20,7 @@
 - 完整案例一：[`MIT-Swift-migration/`](MIT-Swift-migration/)——十年 OC/UIKit 老手迁移 Swift/SwiftUI/Concurrency/Combine（T1–T6 全部闭环，代码 Swift 6.3.3 实跑）；
 - 完整案例二：[`MIT-Python-Migration/`](MIT-Python-Migration/)——同一位学员的 Python 复习线（T1 基础 → T2 线代 → T3 概率论 → T4 PyTorch → T5 算法收束 → T6 async 落地，六轮闭环，代码全实跑；2026-08-17 补 T7–T9 三独立轮：LLM API 客户端与提示工程 / Embedding 与向量检索 / Tokenizer 与 Transformer，出题+密卷+示例批改/费曼+参考代码齐备并实跑验证）；
 - 完整案例三：[`MIT-DesignPattern-Migration/`](MIT-DesignPattern-Migration/)——设计模式系统化（六主题；T1–T6 出题 + 密卷 + 24 个 Swift 代码练习 + 示例批改/费曼，**三处齐全**）。
-- 完整案例四：[`MIT-CoreML-Migration/`](MIT-CoreML-Migration/)——CoreML 端侧推理（六主题：基座 → 资产转换 → Vision 管线 → 更新多模态 → 性能工程 → 收束；T1–T6 出题 + 密卷 + 24 个 Swift 参考脚本本机实跑 + 示例批改/费曼，**三处齐全**）。
+- 完整案例四：[`MIT-CoreML-Migration/`](MIT-CoreML-Migration/)——CoreML 端侧推理（九主题：T1–T6 Swift 主线 + T7 Python 模型创建与转换（coremltools，实跑）/ T8 VisionKit 与系统视觉能力 / T9 C++ + Python + CoreML 集成（造模→编译→C++ 推理闭环实跑，对拍一致）；密卷全量升级为标准结构，**三处齐全**）。
 
 ## MIT 方法速览
 
@@ -105,7 +105,7 @@ MIT-Migration/                            ← 主仓库（main 归档 + 分支�
 │   └── 项目真机线/（骨架占位）
 ├── MIT-Python-Migration/                 ← 案例二（T1–T6 闭环，结构同上）
 ├── MIT-DesignPattern-Migration/          ← 案例三（T1–T6 齐备）
-├── MIT-CoreML-Migration/                 ← 案例四（T1–T6 齐备，端侧推理）
+├── MIT-CoreML-Migration/                 ← 案例四（T1–T9 齐备：Swift + Python 造模 + VisionKit + C++ 集成）
 └── worktrees（见下表）
 
 分支布局：
