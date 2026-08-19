@@ -21,6 +21,7 @@
 - 完整案例二：[`MIT-Python-Migration/`](MIT-Python-Migration/)——同一位学员的 Python 复习线（T1 基础 → T2 线代 → T3 概率论 → T4 PyTorch → T5 算法收束 → T6 async 落地，六轮闭环，代码全实跑；2026-08-17 补 T7–T9 三独立轮：LLM API 客户端与提示工程 / Embedding 与向量检索 / Tokenizer 与 Transformer，出题+密卷+示例批改/费曼+参考代码齐备并实跑验证）；
 - 完整案例三：[`MIT-DesignPattern-Migration/`](MIT-DesignPattern-Migration/)——设计模式系统化（六主题；T1–T6 出题 + 密卷 + 24 个 Swift 代码练习 + 示例批改/费曼，**三处齐全**）。
 - 完整案例四：[`MIT-CoreML-Migration/`](MIT-CoreML-Migration/)——CoreML 端侧推理（九主题：T1–T6 Swift 主线 + T7 Python 模型创建与转换（coremltools，实跑）/ T8 VisionKit 与系统视觉能力 / T9 C++ + Python + CoreML 集成（造模→编译→C++ 推理闭环实跑，对拍一致）；密卷全量升级为标准结构，**三处齐全**）。
+- 新线五（待开跑）：[`MIT-LLM-Migration/`](MIT-LLM-Migration/)——LLM 全栈覆盖线（七主题：T1 LLM 基座心智 → T2 Transformer 原理 → T3 提示工程 → T4 RAG/记忆 → T5 Agent 循环 → T6 Harness 架构 → T7 收束造最小 Agent Harness；Python 线 T7–T9 旧稿由本线整合接管；学员侧闭卷，默认全 mock 可跑）。
 
 ## MIT 方法速览
 
@@ -56,6 +57,7 @@ swift Q1-值语义泄漏现形.swift     # 每个文件都是独立顶层脚本
 | Python | `.worktrees/python-student` | `.worktrees/python-coach` |
 | 设计模式 | `.worktrees/dp-student` | `.worktrees/dp-coach` |
 | CoreML | `.worktrees/coreml-student` | `.worktrees/coreml-coach` |
+| LLM | `.worktrees/llm-student` | `.worktrees/llm-coach` |
 
 学员目录只有骨架 + 题干 + 空 `代码/T{n}/`，**没有密卷、旧作答、批改、费曼与解法代码**。标准循环：
 
@@ -106,6 +108,7 @@ MIT-Migration/                            ← 主仓库（main 归档 + 分支�
 ├── MIT-Python-Migration/                 ← 案例二（T1–T6 闭环，结构同上）
 ├── MIT-DesignPattern-Migration/          ← 案例三（T1–T6 齐备）
 ├── MIT-CoreML-Migration/                 ← 案例四（T1–T9 齐备：Swift + Python 造模 + VisionKit + C++ 集成）
+├── MIT-LLM-Migration/                    ← 线五（骨架 + T1 出题/密卷就绪，待开跑）
 └── worktrees（见下表）
 
 分支布局：
@@ -118,6 +121,8 @@ MIT-Migration/                            ← 主仓库（main 归档 + 分支�
   feat/mit-dp-study-student           设计模式学员：三处齐全
   feat/mit-coreml-study               CoreML 教练：密卷 + 参考代码 + 示例批改/费曼
   feat/mit-coreml-study-student       CoreML 学员：三处齐全（自律先写后对照）
+  feat/mit-llm-study                  LLM 教练：密卷 + 参考代码 + 台账
+  feat/mit-llm-study-student          LLM 学员：题干 + 空代码目录（闭卷）
 
 已挂 worktree：
   .worktrees/swift-coach            → feat/mit-swift-study
@@ -128,6 +133,8 @@ MIT-Migration/                            ← 主仓库（main 归档 + 分支�
   .worktrees/dp-student       → feat/mit-dp-study-student
   .worktrees/coreml-coach     → feat/mit-coreml-study
   .worktrees/coreml-student   → feat/mit-coreml-study-student
+  .worktrees/llm-coach        → feat/mit-llm-study
+  .worktrees/llm-student      → feat/mit-llm-study-student
 ```
 
 ## 纪律红线（失真即重跑）
@@ -137,10 +144,11 @@ MIT-Migration/                            ← 主仓库（main 归档 + 分支�
 - 台账把半懂写成过关 → 如实性失守；
 - 学员分支出现密卷内容 → 泄漏，该轮作废重跑。
 
-## 当前状态（2026-08-17）
+## 当前状态（2026-08-19）
 
 - **Swift 迁移线**：T1–T6 全部闭环；密卷已与题干分家（6 份），教练/学员双分支 + 双 worktree 就绪；真机线执行序列与回收台账见 `MIT-Swift-migration/05-项目真机线迭代计划.md`；
 - **Python 复习线**：T1–T6 全部闭环；T7–T9 三独立轮（LLM 企业落地补齐）出题 + 密卷 + 示例批改/费曼 + 12 个参考代码齐备（httpx/重试/熔断、余弦检索/切分/迷你 RAG/召回评估、BPE/自注意力/单层 Transformer，实跑验证）；双分支 + 双 worktree 就绪，学员分支零密卷；
 - **设计模式线**：T1–T6 出题 + 密卷 + 24 个 Swift 代码练习（实跑验证）+ 示例批改/费曼齐备，**三处齐全**；待真实开跑；
 - **CoreML 线（新）**：T1–T6 出题 + 密卷 + 24 个 Swift 参考脚本（CoreML/Vision/CreateML，本机实跑）+ 示例批改/费曼齐备，**三处齐全**；双分支 + 双 worktree 就绪；
+- **LLM 全栈线（新）**：骨架七份就绪 + T1 出题/密卷已备；T7 收束造最小 Agent Harness；Python 线 T7–T9 旧稿由本线整合接管；双分支 + 双 worktree 就绪，学员分支零密卷；
 - **首要目标**：各线内容都是「练方法」的器械——先读方法，再重跑一条线，最后开一条自己的新方向，MIT 方法才算真正学会。
