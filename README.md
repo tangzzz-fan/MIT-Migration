@@ -108,7 +108,7 @@ MIT-Migration/                            ← 主仓库（main 归档 + 分支�
 ├── MIT-Python-Migration/                 ← 案例二（T1–T6 闭环，结构同上）
 ├── MIT-DesignPattern-Migration/          ← 案例三（T1–T6 齐备）
 ├── MIT-CoreML-Migration/                 ← 案例四（T1–T9 齐备：Swift + Python 造模 + VisionKit + C++ 集成）
-├── MIT-LLM-Migration/                    ← 线五（T1–T7 题干+密卷齐备，待开跑）
+├── MIT-LLM-Migration/                    ← 线五（T1 闭环 + T2–T7 题干/密卷/参考代码备齐）
 └── worktrees（见下表）
 
 分支布局：
@@ -150,5 +150,5 @@ MIT-Migration/                            ← 主仓库（main 归档 + 分支�
 - **Python 复习线**：T1–T6 全部闭环；T7–T9 三独立轮（LLM 企业落地补齐）出题 + 密卷 + 示例批改/费曼 + 12 个参考代码齐备（httpx/重试/熔断、余弦检索/切分/迷你 RAG/召回评估、BPE/自注意力/单层 Transformer，实跑验证）；双分支 + 双 worktree 就绪，学员分支零密卷；
 - **设计模式线**：T1–T6 出题 + 密卷 + 24 个 Swift 代码练习（实跑验证）+ 示例批改/费曼齐备，**三处齐全**；待真实开跑；
 - **CoreML 线（新）**：T1–T6 出题 + 密卷 + 24 个 Swift 参考脚本（CoreML/Vision/CreateML，本机实跑）+ 示例批改/费曼齐备，**三处齐全**；双分支 + 双 worktree 就绪；
-- **LLM 全栈线（新）**：T1 闭环（首轮概念 1过3半2未、代码 3过1半，复攻五项销账，费曼达标，代码全实跑）；T2–T7 题干+密卷齐备待开跑；双分支 + 双 worktree，学员分支零密卷；
+- **LLM 全栈线（新）**：T1 闭环（首轮概念 1过3半2未、代码 3过1半，复攻五项销账，费曼达标）；T2–T7 题干+密卷+教练参考代码 23 题齐备（全实跑：注意力/mask/残差、结构化管道、迷你 RAG、ReAct 循环、权限闸门、整件 harness 含 eval 回归捕获演示）；双分支 + 双 worktree，学员分支零密卷；
 - **首要目标**：各线内容都是「练方法」的器械——先读方法，再重跑一条线，最后开一条自己的新方向，MIT 方法才算真正学会。
